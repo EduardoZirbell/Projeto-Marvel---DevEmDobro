@@ -9,6 +9,10 @@ personagens.forEach((personagem) => {
         personagemSelecionado.classList.remove('selecionado')
         personagem.classList.add('selecionado')
 
+        // aparecer 1P
+        const tag = document.querySelector('.tag')
+        if (personagemSelecionado.classList.contains('selecionado')) tag.style.display = 'block'
+        
         // troca de personagens grande
         const personagemJogador1 = document.querySelector('#personagem-jogador-1')
         personagemJogador1.src = `./src/imagens/${idSelecionado}.png`
